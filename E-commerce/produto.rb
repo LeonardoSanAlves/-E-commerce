@@ -75,11 +75,10 @@ class Store
 end
 
 
-store01 = Store.new("loja sanches",01,[product3])
+store01 = Store.new("loja sanches",01)
 
 
 store01.add_product(product1)
-store01.add_product(product2)
 
 pp store01.catalogo
 
