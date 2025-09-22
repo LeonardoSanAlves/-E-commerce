@@ -20,6 +20,9 @@ class Product
             end 
         end
 
+
+# e um método pra verificar o stock
+
         def remove_stock
             if @stock > 0
                 @stock -=1
@@ -47,12 +50,6 @@ pp product3.use
 # Desafio 4
 
 
-# Método comprar produto / Vender produto -> loja
-
-# Método verificar estoque -> loja
-
-# e um método pra verificar o stock
-
 
 
 class Store < Product
@@ -73,6 +70,9 @@ class Store < Product
     end 
 
 
+
+    # Método comprar produto / Vender produto -> loja
+    
     def buy_product(product)
         @catalogo.delete(product)
     end
