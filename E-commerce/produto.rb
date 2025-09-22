@@ -1,11 +1,11 @@
 class Product
 
-    attr_accessor :name, :value,:id,:type, :category
+    attr_accessor :name, :value_dolar,:id,:type, :category
 
 
-    def initialize (name,value,id,type,category,stock=[])
+    def initialize (name,value_dolar,id,type,category,stock=[])
         @name = name
-        @value = value
+        @value_dolar = value_dolar
         @id = id
         @type = type
         @category = category
@@ -35,12 +35,12 @@ class Product
         end 
 end
 
-    product1 = Product.new't-shirt','40$','1','parte de cima','roupa',4
-    product2 = Product.new 'jeans','50$','2','parte de baixo','roupa',4
-    product3 = Product.new 'shorts','20$','3','parte de baixo','roupa',4
+    product1 = Product.new't-shirt',40,1,'parte de cima','roupa',4
+    product2 = Product.new 'jeans',50,2,'parte de baixo','roupa',4
+    product3 = Product.new 'shorts',20,3,'parte de baixo','roupa',4
 
 
-product1.remove_stock
+# product1.remove_stock
 
 pp product3.use
 
@@ -72,9 +72,9 @@ class Store < Product
 
 
     # Método comprar produto / Vender produto -> loja
-    
-    def buy_product(product)
-        @catalogo.delete(product)
+
+    def buy_product(products)
+        products.remove_stock
     end
 
 
@@ -93,11 +93,14 @@ store01 = Store.new("loja sanches",01)
 
 store01.add_product(product1)
 
-pp store01.catalogo
+# pp store01.catalogo
 
 
 # store01.remove_product(product1)
 
-# stock01.buy_product(@stock)
+store01.buy_product(product1)
 
-pp store01.stock_store(product1)
+# pp store01.buy_product(1)
+
+pp store01
+

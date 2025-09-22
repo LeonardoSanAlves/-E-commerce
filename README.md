@@ -51,4 +51,4 @@ Atributos em produto = categoria / mudar o type
 # e alterar o nome de product pra catalogo
 
 
-# Atributos em produto = categoria / mudar o type 
+Atributos em produto = categoria / mudar o type 
