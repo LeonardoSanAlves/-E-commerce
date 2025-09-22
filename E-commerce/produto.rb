@@ -19,12 +19,25 @@ class Product
                 pp "#{name}, posso usar no verao"
             end 
         end
+
+        def remove_stock
+            if @stock > 0
+                @stock -=1
+
+            puts "Uma unidade foi removida. Novo stock: #{@stock}"
+
+            else 
+                puts "Acabou o stock"
+        end 
+        end 
 end
 
     product1 = Product.new't-shirt','40$','1','parte de cima','roupa',4
     product2 = Product.new 'jeans','50$','2','parte de baixo','roupa',4
     product3 = Product.new 'shorts','20$','3','parte de baixo','roupa',4
 
+
+product1.remove_stock
 
 pp product3.use
 
@@ -42,7 +55,7 @@ pp product3.use
 
 
 
-class Store
+class Store < Product
 
     attr_accessor :name, :id, :catalogo
 
@@ -83,8 +96,8 @@ store01.add_product(product1)
 pp store01.catalogo
 
 
-store01.remove_product(product1)
+# store01.remove_product(product1)
 
 # stock01.buy_product(@stock)
 
-pp store01.catalogo
+pp store01.stock_store(product1)
