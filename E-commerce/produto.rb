@@ -35,9 +35,9 @@ class Product
         end 
 end
 
-    product1 = Product.new't-shirt',40,1,'parte de cima','roupa',4
-    product2 = Product.new 'jeans',50,2,'parte de baixo','roupa',4
-    product3 = Product.new 'shorts',20,3,'parte de baixo','roupa',4
+    product1 = Product.new't-shirt',40.00,1,'parte de cima','roupa',4
+    product2 = Product.new 'jeans',50.00,2,'parte de baixo','roupa',4
+    product3 = Product.new 'shorts',20.00,3,'parte de baixo','roupa',4
 
 
 # product1.remove_stock
@@ -73,7 +73,7 @@ class Store < Product
 
     # Método comprar produto / Vender produto -> loja
 
-    def buy_product(products)
+    def buy_product(product)
         products.remove_stock
     end
 
